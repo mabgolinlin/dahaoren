@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	a{
+		text-decoration: none;
+	}
+	body{
+		background-color: #f67f37;
+	}
+
+	@font-face{
+		font-family: iconfont;
+		src:url("fonts/websymbols-regular-webfont.ttf"),
+			url("fonts/websymbols-regular-webfont.eof"),
+			url("fonts/websymbols-regular-webfont.woff"),
+			url("fonts/websymbols-regular-webfont.svg");
+	}
+
+	@keyframes lightSpeedIn {
+    from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+    60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+    80% {
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+    to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+	.box{
+		width: 800px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	.box ul{
+		list-style: none;
+	}
+
+	.box ul li{
+		width: 400px;
+		height: 100px;
+		border-left: 5px solid #000;
+		background-color: #fff;
+		margin-top: 20px;
+		transition: background-color 1s linear,border-left .5s;
+		-webkit-transition: background-color 1s linear,border-left .5s;
+		cursor:pointer;
+		
+	}
+
+	.box ul li:first-child{
+		animation: lightSpeedIn 1s 0s;
+        animation-timing-function: ease-out;
+	}
+
+	.box ul li:nth-child(2){
+		animation: lightSpeedIn 1s  0.3s;
+        animation-timing-function: ease-out;
+	}
+
+	.box ul li:nth-child(3){
+		animation: lightSpeedIn 1s  0.6s;
+        animation-timing-function: ease-out;
+	}
+
+	.box ul li:nth-child(4){
+		animation: lightSpeedIn 1s  0.9s;
+        animation-timing-function: ease-out;
+	}
+
+	.box ul li:nth-child(5){
+		animation: lightSpeedIn 1s  1.2s;
+        animation-timing-function: ease-out;
+	}
+
+	.icon{
+		display: block;
+		font-family: iconfont;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		float: left;
+		text-align: center;
+		color: #000;
+		padding: 25px;
+		transition: color .3s, transform .3s;
+		-webkit-transition: color .3s, transform .3s;
+	}
+
+	h2{
+		padding-top: 28px;
+		margin-bottom: 6px;
+		margin-left: 100px;
+		transition: color 1s, transform .2s  linear;
+		-webkit-transition: color 1s, transform .2s  linear;/**/
+		transform-origin: left top ;
+
+		}
+
+	p{
+		font-size: 12px;
+		color: #909090;
+		transition: color 1s,transform .2s linear;/**/
+		-webkit-transition: color 1s,transform .2s linear;/**/
+		transform-origin: left bottom;
+	}
+
+	.box ul li:hover{
+			background-color: #000;
+			border-left: 5px solid yellow;
+		}
+	li:hover .icon{
+			transform: scale(2,2);
+			-webkit-transform: scale(2,2);
+			color: yellow;
+		}
+	li:hover h2{
+			transform: scale(.6,.6) ;
+			transform-origin: 0 0 ;
+			-webkit-transform: scale(.6,.6) ;
+			/*-webkit-transform-origin: 0 0 ;*/
+			color: yellow;
+			margin-top: 20px;
+			margin-left: 100px;
+
+		}
+	li:hover p{
+			transform: scale(1.8,1.8);
+			transform-origin: 0 100%;
+			-webkit-transform: scale(1.8,1.8);
+			/*-webkit-transform-origin: 0 100%;*/
+			color: #aaf;
+			margin-left: 100px;
+
+		}
+	</style>
+
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<a href="#" class="icon">A</a>
+				<h2>Exceptional Service</h2>
+				<p>Personalized to your needs</p>
+			</li>
+			<li>
+				<a href="#" class="icon">I</a>
+				<h2>Creative Storytelling</h2>
+				<p>Advanced use of technology</p>
+			</li>
+			<li>
+				<a href="#" class="icon">C</a>
+				<h2>Infographical Education</h2>
+				<p>Understanding visually</p>
+			</li>
+			<li>
+				<a href="#" class="icon">S</a>
+				<h2>Sophisticated Team</h2>
+				<p>Professionals in action</p>
+			</li>
+			<li>
+				<a href="#" class="icon">d</a>
+				<h2>Unconditional Support</h2>
+				<p>24/7for you needs</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
